@@ -1,0 +1,4 @@
+name: RedderHub
+version: '${project.version}'
+main: dev.mruniverse.redderhub.RedderHub
+description: Hub Command, Reconnect System
