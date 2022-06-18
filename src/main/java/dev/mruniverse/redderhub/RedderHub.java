@@ -5,6 +5,7 @@ import dev.mruniverse.slimelib.SlimePlatform;
 import dev.mruniverse.slimelib.SlimePlugin;
 import dev.mruniverse.slimelib.SlimePluginInformation;
 import dev.mruniverse.slimelib.input.InputManager;
+import dev.mruniverse.slimelib.input.bungeecord.BungeeInputManager;
 import dev.mruniverse.slimelib.loader.BaseSlimeLoader;
 import dev.mruniverse.slimelib.loader.DefaultSlimeLoader;
 import dev.mruniverse.slimelib.logs.SlimeLogger;
@@ -38,10 +39,7 @@ public final class RedderHub extends Plugin implements SlimePlugin<Plugin> {
 
         slimeLoader = new DefaultSlimeLoader<>(
                 this,
-                InputManager.create(
-                        getServerType(),
-                        this
-                )
+                new BungeeInputManager(this)
         );
 
         information = new SlimePluginInformation(
@@ -51,11 +49,11 @@ public final class RedderHub extends Plugin implements SlimePlugin<Plugin> {
 
         slimeLoader.setFiles(RedderFile.class);
 
+        slimeLoader.init();
+
         slimeLoader.getCommands().register(
                 new HubCommand(this)
         );
-
-        slimeLoader.init();
     }
 
     @Override
