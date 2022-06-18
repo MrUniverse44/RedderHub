@@ -61,7 +61,7 @@ public class HubCommand implements SlimeCommand {
         if (sender.isConsoleSender()) {
 
             if (args.length >= 1) {
-                if (args[1].equalsIgnoreCase("reload")) {
+                if (args[0].equalsIgnoreCase("reload")) {
                     plugin.reload();
                     sender.sendColoredMessage("&aPlugin reloaded");
                     return;
