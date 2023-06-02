@@ -1,10 +1,10 @@
-package dev.mruniverse.redderhub;
+package me.blueslime.scaredcore;
 
-import dev.mruniverse.slimelib.SlimeFiles;
-import dev.mruniverse.slimelib.SlimePlatform;
+import me.blueslime.slimelib.SlimeFiles;
+import me.blueslime.slimelib.SlimePlatform;
 
 @SuppressWarnings("unused")
-public enum RedderFile implements SlimeFiles {
+public enum Configuration implements SlimeFiles {
     SETTINGS("settings.yml");
 
     private final boolean differentFolder;
@@ -15,28 +15,28 @@ public enum RedderFile implements SlimeFiles {
 
     private final String resource;
 
-    RedderFile(String file) {
+    Configuration(String file) {
         this.file = file;
         this.resource = file;
         this.differentFolder = false;
         this.folder = "";
     }
 
-    RedderFile(String file,String folder) {
+    Configuration(String file, String folder) {
         this.file = file;
         this.resource = file;
         this.differentFolder = true;
         this.folder = folder;
     }
 
-    RedderFile(String file,String folder,String resource) {
+    Configuration(String file, String folder, String resource) {
         this.file = file;
         this.resource = resource;
         this.differentFolder = true;
         this.folder = folder;
     }
 
-    RedderFile(String file,String folderOrResource,boolean isResource) {
+    Configuration(String file, String folderOrResource, boolean isResource) {
         this.file = file;
         if(isResource) {
             this.resource = folderOrResource;

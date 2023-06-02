@@ -1,4 +1,4 @@
-name: RedderHub
+name: ScaredCore
 version: '${project.version}'
-main: dev.mruniverse.redderhub.RedderHub
+main: me.blueslime.scaredcore.ScaredCore
 description: Hub Command, Reconnect System
