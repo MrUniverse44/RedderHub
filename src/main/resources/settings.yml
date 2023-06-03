@@ -52,8 +52,8 @@ messages:
       join-motd: "&aWelcome %player% to the hub server!"
     es:
       # Connecting
-      connecting: "&cScaredCore &8| &fConnecting to a hub server!"
+      connecting: "&cScaredCore &8| &fConectandote a un servidor lobby!"
       # This message appears when the player is already in a hub
-      already: "&cScaredCore &8| &fYou are already on the hub server!"
+      already: "&cScaredCore &8| &fTu ya estas conectado en este servidor!"
       # This message appears when the players join to a hub server
       join-motd: "&aBienvenido %player% a el servidor de lobby!"
