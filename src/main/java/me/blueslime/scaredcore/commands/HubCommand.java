@@ -1,6 +1,7 @@
 package me.blueslime.scaredcore.commands;
 
 import me.blueslime.scaredcore.ScaredCore;
+import me.blueslime.scaredcore.utils.HexConverter;
 import me.blueslime.scaredcore.utils.ServerUtils;
 import me.blueslime.slimelib.commands.command.Command;
 import me.blueslime.slimelib.commands.command.SlimeCommand;
@@ -135,18 +136,22 @@ public class HubCommand implements SlimeCommand {
             List<?> list = (List<?>) aO;
             for (Object object : list) {
                 sender.sendColoredMessage(
+                    HexConverter.convert(
                         object.toString().replace("%server%", server)
-                                .replace("%name%", server)
-                                .replace("%lobby%", server)
-                                .replace("%player%", sender.getName())
+                            .replace("%name%", server)
+                            .replace("%lobby%", server)
+                            .replace("%player%", sender.getName())
+                    )
                 );
             }
         } else {
             sender.sendColoredMessage(
+                HexConverter.convert(
                     aO.toString().replace("%server%", server)
-                            .replace("%name%", server)
-                            .replace("%lobby%", server)
-                            .replace("%player%", sender.getName())
+                        .replace("%name%", server)
+                        .replace("%lobby%", server)
+                        .replace("%player%", sender.getName())
+                )
             );
         }
     }

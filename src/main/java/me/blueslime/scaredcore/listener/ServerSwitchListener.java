@@ -1,6 +1,7 @@
 package me.blueslime.scaredcore.listener;
 
 import me.blueslime.scaredcore.ScaredCore;
+import me.blueslime.scaredcore.utils.HexConverter;
 import me.blueslime.slimelib.file.configuration.ConfigurationHandler;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -44,12 +45,12 @@ public class ServerSwitchListener implements Listener {
                     "default";
 
             sendList(
-                    event.getPlayer(),
-                    event.getPlayer().getServer().getInfo().getName(),
-                    plugin.getSettings().get(
-                            "messages.hub-command." + path + ".join-motd",
-                            "&aWelcome %player% to the hub server!"
-                    )
+                event.getPlayer(),
+                event.getPlayer().getServer().getInfo().getName(),
+                plugin.getSettings().get(
+                    "messages.hub-command." + path + ".join-motd",
+                    "&aWelcome %player% to the hub server!"
+                )
             );
         }
     }
@@ -59,28 +60,31 @@ public class ServerSwitchListener implements Listener {
             List<?> list = (List<?>) aO;
             for (Object object : list) {
                 sender.sendMessage(
-                        colorize(
-                           object.toString().replace("%server%", server)
-                                   .replace("%name%", server)
-                                   .replace("%lobby%", server)
-                                   .replace("%player%", sender.getName())
-                        )
+                    colorize(
+                       object.toString().replace("%server%", server)
+                           .replace("%name%", server)
+                           .replace("%lobby%", server)
+                           .replace("%player%", sender.getName())
+                    )
                 );
             }
         } else {
             sender.sendMessage(
-                    colorize(
-                            aO.toString().replace("%server%", server)
-                                    .replace("%name%", server)
-                                    .replace("%lobby%", server)
-                                    .replace("%player%", sender.getName())
-                    )
+                colorize(
+                    aO.toString().replace("%server%", server)
+                        .replace("%name%", server)
+                        .replace("%lobby%", server)
+                        .replace("%player%", sender.getName())
+                )
             );
         }
     }
     private TextComponent colorize(String message) {
         return new TextComponent(
-                ChatColor.translateAlternateColorCodes('&', message)
+            ChatColor.translateAlternateColorCodes(
+                '&',
+                HexConverter.convert(message)
+            )
         );
     }
 }
