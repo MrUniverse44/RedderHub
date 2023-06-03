@@ -1,23 +1,24 @@
 
 ---
 
-<img align="center" alt="Plugin Image" src="https://i.imgur.com/uufDLQS.png">
+<img align="center" alt="Plugin Image" src="https://i.imgur.com/ceziJZK.png">
 
 ---
 
-<img align="center" alt="Features Image" src="https://i.imgur.com/HOrZUP9.png">
+<img align="center" alt="Features Image" src="https://i.imgur.com/u7SKV18.png">
 
 
 
 * Editable Hub Command & Aliases
 * MultiHub Support
-* Support from 1.8 to 1.19
+* Locale System
+* Support from 1.8 to 1.20
 * Blacklist for servers to deny the hub command.
-* IP Limiter
+* And more....
 
 ---
 
-<img align="center" src="https://i.imgur.com/7dNuZ9H.png">
+<img align="center" src="https://i.imgur.com/cHPl6eT.png">
 
 ## Files
 
