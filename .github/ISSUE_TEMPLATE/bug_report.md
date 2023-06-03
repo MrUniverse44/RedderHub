@@ -21,10 +21,7 @@ Steps to reproduce the behavior:
 If applicable, add screenshots to help explain your problem.
 
 **System Information (please complete the following information):**
-- Platform (BungeeCord, Spigot, Sponge, Velocity)
 - Plugin Version
-
-- ProtocolLIB version (OPTIONAL only if you are on spigot)
 
 **Additional context**
 Add any other context about the problem here.

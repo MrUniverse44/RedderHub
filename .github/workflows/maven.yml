@@ -30,6 +30,6 @@ jobs:
       - name: Upload files ☁
         uses: actions/upload-artifact@v3
         with:
-          name: RedderHub
-          path: ./target/RedderHub*
+          name: ScaredCore
+          path: ./target/ScaredCore*
           retention-days: 30
