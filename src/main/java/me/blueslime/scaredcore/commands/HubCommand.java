@@ -68,7 +68,7 @@ public class HubCommand implements SlimeCommand {
 
         ConfigurationHandler settings = plugin.getSettings();
 
-        String lang = player.getLocale().toString();
+        String lang = player.getLocale() != null ? player.getLocale().toString() : "default";
 
         if (lang.contains("-")) {
             lang = lang.split("-")[0];
